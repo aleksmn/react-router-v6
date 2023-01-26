@@ -5,6 +5,8 @@ import Book from './components/Book';
 import About from './components/About';
 import Contacts from './components/Contacts';
 import Navbar from "./components/Navbar";
+import NewBook from './components/NewBook';
+import NotFound from './components/NotFound';
 
 const App = () => {
   return (
@@ -16,6 +18,8 @@ const App = () => {
         <Route path="/about" element={< About />} />
         <Route path="/contacts" element={< Contacts />} />
         <Route path="/books/:id" element={< Book />} />
+        <Route path="/books/new" element={< NewBook />} />
+        <Route path="*" element={< NotFound />} />        
       </Routes>
     </div>
   )

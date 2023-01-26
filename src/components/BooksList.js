@@ -7,7 +7,7 @@ const BooksList = () => {
 
             <Link to="/books/1">Первая книга</Link><br/>
             <Link to="/books/2">Вторая книга</Link><br />
-
+            <Link to="/books/new">Добавить книгу...</Link><br />
 
         </>
     );
