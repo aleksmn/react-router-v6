@@ -4,3 +4,7 @@ body {
   margin: 40px;
   font-family: sans-serif;
 }
+
+nav a {
+  color:white;
+}
