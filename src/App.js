@@ -12,6 +12,12 @@ import { BookLayout } from './components/BookLayout';
 const App = () => {
   return (
     <div className="content">
+
+      <Routes>
+        <Route path="*" element={<h1>Лого!</h1>}></Route>
+        <Route path="/books/*" element={<h1>Лого на странице с книгами!</h1>}></Route>
+      </Routes>
+      
       <Navbar />
       <Routes>
         <Route path="/" element={< Home />} />
