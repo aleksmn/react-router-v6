@@ -12,3 +12,27 @@ a {
   color:white;
   text-decoration: none;
 }
+
+
+nav ul {
+  margin: 0 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav a {
+  background-color: blueviolet;
+  display: block;
+  padding: 8px 4px;
+  margin: 0 4px 4px 0;
+}
+
+nav a:hover {
+  background-color: white;
+  color: blueviolet;
+}

@@ -7,6 +7,7 @@ import Contacts from './components/Contacts';
 import Navbar from "./components/Navbar";
 import NewBook from './components/NewBook';
 import NotFound from './components/NotFound';
+import { BookLayout } from './components/BookLayout';
 
 const App = () => {
   return (
@@ -14,12 +15,19 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={< Home />} />
-        <Route path="/books" element={< BooksList />} />
         <Route path="/about" element={< About />} />
         <Route path="/contacts" element={< Contacts />} />
-        <Route path="/books/:id" element={< Book />} />
-        <Route path="/books/new" element={< NewBook />} />
-        <Route path="*" element={< NotFound />} />        
+
+        <Route path="/books" element={<BookLayout />}>
+          <Route index element={< BooksList />} />
+          <Route path=":id" element={< Book />} />
+          <Route path="new" element={< NewBook />} />
+        </Route>
+
+        {/* <Route path="/books/:id" element={< Book />} />
+        <Route path="/books/new" element={< NewBook />} /> */}
+
+        <Route path="*" element={< NotFound />} />
       </Routes>
     </div>
   )
