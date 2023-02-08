@@ -37,3 +37,10 @@ nav a:hover {
   background-color: white;
   color: blueviolet;
 }
+
+
+/* nav .active {
+  color: blueviolet;
+  background-color: white;
+  font-weight: bold;
+} */
