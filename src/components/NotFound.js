@@ -1,10 +1,20 @@
-import { Navigate } from "react-router-dom";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const NotFound = () => {
-    return ( 
-        // <h1>Упс! Страница не найдена!</h1>
-        <Navigate to='/' />
-     );
+    const navigate = useNavigate()
+
+    useEffect(() => {
+
+        setTimeout(()=>{
+            navigate("/")
+        }, 1000)
+
+    })
+
+    return (
+        <h1>Упс! Страница не найдена!</h1>
+    );
 }
- 
+
 export default NotFound;
